@@ -27,11 +27,13 @@ let package = Package(
         products: [
             .library(name: "Starscream", targets: ["Starscream"])
         ],
-        dependencies: [],
+        dependencies: [
+            .package(url: "https://github.com/tesseract-one/UncommonCrypto.swift.git", from: "0.1.0")
+		],
         targets: [
             .target(
                 name: "Starscream",
-                dependencies: ["CZlib"],
+                dependencies: ["CZlib",.product(name: "UncommonCrypto", package: "UncommonCrypto.swift")],
                 path: "Sources"),
             .target(
                 name: "CZlib",

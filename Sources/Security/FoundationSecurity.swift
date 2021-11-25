@@ -21,7 +21,12 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
-import CommonCrypto
+#if os(Linux)
+	import UncommonCrypto
+#else
+	import CommonCrypto
+#endif
+
 
 public enum FoundationSecurityError: Error {
     case invalidRequest
