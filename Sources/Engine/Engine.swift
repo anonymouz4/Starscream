@@ -8,8 +8,9 @@
 
 import Foundation
 #if canImport(FoundationNetworking)
-	@_exported import FoundationNetworking
+	import FoundationNetworking
 #endif
+
 
 public protocol EngineDelegate: AnyObject {
     func didReceive(event: WebSocketEvent)

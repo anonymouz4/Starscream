@@ -21,6 +21,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
+#if canImport(FoundationNetworking)
+	import FoundationNetworking
+#endif
 
 let FinMask: UInt8          = 0x80
 let OpCodeMask: UInt8       = 0x0F

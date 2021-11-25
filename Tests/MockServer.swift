@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(FoundationNetworking)
+	import FoundationNetworking
+#endif
 @testable import Starscream
 
 public class MockConnection: Connection, HTTPServerDelegate, FramerEventClient, FrameCollectorDelegate {

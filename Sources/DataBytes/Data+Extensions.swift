@@ -23,6 +23,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
+#if canImport(FoundationNetworking)
+	import FoundationNetworking
+#endif
 
 internal extension Data {
     struct ByteError: Swift.Error {}
